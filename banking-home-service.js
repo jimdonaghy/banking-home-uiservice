@@ -12,7 +12,7 @@ let response = "{}";
 
 function asyncFetchAccounts() {
     return new Promise(resolve => {
-        restClient.get("http://localhost:8082/accounts", (data,response)=> {
+        restClient.get("accounts-domainserv-git:8081/accounts", (data,response)=> {
          resolve(data)
        })
     })
@@ -20,7 +20,7 @@ function asyncFetchAccounts() {
 
  function asyncFetchCustomers() {
     return new Promise(resolve => {
-        restClient.get("http://localhost:8080/customers", (data,response)=> {
+        restClient.get("customers-domainservice:8081/customers", (data,response)=> {
          resolve(data)
        })
     })
